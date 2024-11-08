@@ -17,7 +17,7 @@ jobs:
         with:
           host: ${{ secrets.vps-f5010fa5.vps.ovh.net }}
           username: ${{ secrets.ubuntu }}
-          password: ${{ secrets.Nooblet554@@ }}
+          password: ${{ secrets.Gbbf44dsffd }}
           port: 22
           script: |
             cd /path/to/your/project
