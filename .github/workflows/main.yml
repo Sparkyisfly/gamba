@@ -1,0 +1,25 @@
+name: Deploy to VPS
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out the code
+        uses: actions/checkout@v2
+
+      - name: Deploy to VPS
+        uses: appleboy/ssh-action@v0.1.8
+        with:
+          host: ${{ secrets.vps-f5010fa5.vps.ovh.net }}
+          username: ${{ secrets.ubuntu }}
+          password: ${{ secrets.Nooblet554@@ }}
+          port: 22
+          script: |
+            cd /path/to/your/project
+            git pull origin main
+            pm2 restart all
